@@ -1,475 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موبایل تک</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
+ 
 </head>
 
 <body>
-    <div class="all">
 
+  <nav class="w-full p-4">
 
-        <div class="topheder">
-            <div><img src="pic/location-pin.svg" alt="" style="width: 15px;height: 15px;">خرم آباد خیابان 17 شهریور
-                مجتمع فنی </div>
-            <div><img src="pic/phone.svg" alt="" style="width: 15px;height: 15px;">پشتیبانی 24ساعته:09014151520 </div>
-            <div>دنبال کنید<a href="https://instagram.com/hesan_forouzandeh_"><img src="pic/instagram.svg" alt=""
-                        style="width: 15px;height: 15px;"></a>
-                <a href="https://t.me/IM_Hesan">
-                    <img src="pic/telegram.svg" alt="" style="width: 15px;height: 15px;">
-                </a>
-            </div>
+    <div class="flex items-center justify-between bg-orange-50 rounded-lg">
 
+      <!-- دکمه‌ها سمت چپ -->
 
+      <div class="flex items-center gap-3 pl-5">
+
+        <button class="bg-[#FFFCF7] rounded-lg hover:text-red-50 px-3 py-3 text-sm">Login</button>
+
+        <button class="bg-[#FFFCF7] rounded-lg hover:text-red-500 px-3 py-3 text-sm">Sign Up</button>
+
+      </div>
+      <h1 class="text-3xl" >NORISA</h1>
+
+      <!-- دسته‌بندی وسط -->
+
+      <ul class="flex items-center gap-6">
+
+        <li class="hidden md:block">درباره ما</li>
+
+        <li class="hidden md:block">ارتباط با ما</li>
+        <div class="relativ group">
+        <a href="#" class="hidden md:block">دسته بندی</a>
+
+          <div class="absolute hidden group-hover:block bg-white text-black w-40 shadow-lg rounded-lg ">
+
+            <a href="#" class="block p-3 hover:bg-gray-100">Mobile</a>
+            <a href="#" class="block p-3 hover:bg-gray-100">Laptop</a>
+            <a href="#" class="block p-3 hover:bg-gray-100">Accessories</a>
+
+          </div>
         </div>
 
+        <a href="#" class="hidden md:block">خانه</a>
+
+      </ul>
+
+      <img src="pic/file_00000000608881f9a6ab4afca15642b7 (1).png" class="w-20 h-20 object-contain rounded-full p-1">
+
+
+
+ <!— دکمه همبرگری —>
+<button id="openBtn" aria-label="باز کردن منو"class="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg hover:bg-slate-100 flex md:hidden">
+  <span class="h-0.5 w-6 bg-slate-800"></span>
+  <span class="h-0.5 w-6 bg-slate-800"></span>
+  <span class="h-0.5 w-6 bg-slate-800"></span>
+</button>
+
+<!— پس‌زمینه تیره —>
+<div id="overlay"
+  class="pointer-events-none fixed inset-0 z-40 bg-black-50 opacity-0 transition-opacity duration-300"></div>
+
+<!— منوی کشویی —>
+<aside id="drawer"
+  class="fixed right-0 top-0 z-50 h-full w-72 max-w-[80%] translate-x-full bg-white shadow-xl transition-transform duration-300 ease-out">
+  <button id="closeBtn" aria-label="بستن منو"class="m-3 h-9 w-9 rounded-lg text-xl hover:bg-slate-100">✕</button>
+  <br>
+  <input type="search" value="" placeholder="search" class="px-2">
+  <br>
+   <a href="#" class="hover:bg-slate-100 px-2 py-1 rounded-lg text-xl">خانه</a>
+  <br>
+   <a href="#" class="hover:bg-slate-100 px-2 py-1 rounded-lg text-xl ">دسته بندی</a>
+  <br>
+   <a href="#" class="hover:bg-slate-100 px-2 py-1 rounded-lg text-xl">ارتباط با ما</a>
+  <br>
+   <a href="#" class="hover:bg-slate-100 px-2 py-1 rounded-lg text-xl">درباره ما</a>
+  
+</aside>
+
+<script>
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("overlay");
+
+  function openMenu() {
+    drawer.classList.remove("translate-x-full");
+    overlay.classList.remove("pointer-events-none", "opacity-0");
+  }
+  function closeMenu() {
+    drawer.classList.add("translate-x-full");
+    overlay.classList.add("pointer-events-none", "opacity-0");
+  }
+
+  document.getElementById("openBtn").onclick = openMenu;
+  document.getElementById("closeBtn").onclick = closeMenu;
+  overlay.onclick = closeMenu;
+</script>
 
 
-        <div class="topbar">
 
-            <div>
-                <pre>موبایل تک</pre>
-                <span>مرجع تخصصی گوشی و لوازم مبایل</span>
-            </div>
-            <div>
-                <input type="search" placeholder="جست وجو..." id="rang">
-            </div>
-            <a href="sabt.html">
-                <div>
-                    <p><img src="pic/user.svg" alt="">ورود/ثبت نام</p>
-                </div>
-            </a>
-            <a href="sabad.html">
-                <div>
-                    <p>سبد خرید <img src="pic/cart.svg" alt=""></p>
-                </div>
-            </a>
 
-        </div>
-
-
-
-
-        <div class="menoo">
-            <a href="index.html">
-                <div><span>خانه</span></div>
-            </a>
-            <a href="mahsolat.html">
-                <div><span>محصولات</span></div>
-            </a>
-            <a href="index.html#brand">
-                <div><span>برند</span></div>
-            </a>
-            <a href="index.html#daste">
-                <div><span>دسته بندی</span></div>
-            </a>
-            <a href="index.html#por"">
-                <div><span>پر فروش</span></div>
-            </a>
-            <a href=" darbare.html">
-                <div><span>درباره ما</span></div>
-            </a>
-        </div>
-
-
-
-
-        <div class="baner">
-            <div>
-                <div class="sb">
-                    <a href="mahsolat.html" style="color: black;">
-                        <p>مشاهده و خرید←</p>
-                    </a>
-                </div>
-            </div>
-
-
-
-
-
-        </div>
-
-
-
-
-        <div class="zbaner">
-            <div>
-                <div>
-                    <img src="pic/fast-shipping.svg" alt="" style="height: 30px; width: 50px; margin-top: 10px;">
-                </div>
-                <span>ارسال سریع</span>
-
-                <pre>ارسال در کمتر از 24ساعت</pre>
-
-            </div>
-            <div>
-                <div>
-                    <img src="pic/support-24-7.svg" alt="" style="height: 30px; width: 50px;margin-top: 10px;">
-                </div>
-                <soan>پشتیبانی 24ساعته </soan>
-                <pre>پشتیبانس انلاین و تلفنی</pre>
-            </div>
-            <div>
-                <div>
-                    <img src="pic/return-guarantee.svg" alt="" style="height: 30px; width: 50px;margin-top: 10px;">
-                </div>
-                <span>ضمانت بازگشت</span>
-                <pre>7روز ضمانت بازگشت کالا</pre>
-            </div>
-            <div>
-                <div>
-                    <img src="pic/authenticity-guarantee.svg" alt=""
-                        style="height: 30px; width: 50px; margin-top: 10px;">
-                </div>
-                <span>ضمانت اصالت کالا</span>
-                <pre>تضمین 100%اصالت کالا</pre>
-            </div>
-            <div>
-                <div>
-                    <img src="pic/secure-payment.svg" alt="" style="height: 30px; width: 50px; margin-top: 10px;">
-                </div>
-                <span>پرداخت امن </span>
-                <pre>پرداخت انلاین و مطمعن</pre>
-            </div>
-        </div>
-
-
-
-        <div class="v">
-            <a name="daste"></a>
-            <span>دسته بندی</span>
-        </div>
-
-
-
-
-        <div class="mahsol">
-            <div>
-                <span>موبایل</span>
-                <a href="mahsolat.html">
-                    <p>مشاهده همه</p>
-                </a>
-                <div>
-                    <img src="pic/b691a366ed4413ad1581ac9d2c275866c5f1273d_1757769767-removebg-preview.png" alt=""
-                        style="height: 140px; width: 140px;">
-                </div>
-
-            </div>
-
-            <div>
-                <span>تبلت</span>
-                <a href="mahsolat.html">
-                    <p>مشاهده همه</p>
-                </a>
-                <div>
-                    <img src="pic/d11ac8f7e6f479f8f76ba7cb40390045301da904_1754240833-removebg-preview.png" alt=""
-                        style="height: 140px; width: 140px;">
-                </div>
-            </div>
-
-            <div>
-                <span>ساعت هوشمند</span>
-                <a href="mahsolat.html">
-                    <p>مشاهده همه</p>
-                </a>
-                <div>
-                    <img src="pic/d1e5b3f2d7efb25b1065e3b633a9d885ce5bb89e_1757856988-removebg-preview.png" alt=""
-                        style="height: 140px; width: 140px;">
-                </div>
-            </div>
-
-            <div>
-                <span>لوازم جانبی</span>
-                <a href="mahsolat.html">
-                    <p>مشاهده همه</p>
-                </a>
-                <div>
-                    <img src="pic/fb9814588ef1d795f0fd820632f4481778c65b8f_1765354532-removebg-preview.png" alt=""
-                        style="height: 140px; width: 140px;">
-                </div>
-            </div>
-
-            <div>
-                <span>ایرپاد و هدفون</span>
-                <a href="mahsolat.html">
-                    <p>مشاهده همه</p>
-                </a>
-                <div>
-                    <img src="pic/145deceac01a66e6cf160ed04f48e9ece3c33098_1754235521-removebg-preview.png" alt=""
-                        style="height: 140px; width: 140px;">
-                </div>
-            </div>
-
-            <div>
-                <span>لپتاپ</span>
-                <a href="mahsolat.html">
-                    <p>مشاهده همه</p>
-                </a>
-                <div>
-                    <img src="pic/8b2c3fc18eae4d0441a803f7a1b6a15f1d81d044_1777384295-removebg-preview.png" alt=""
-                        style="height: 140px; width: 140px;">
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-
-        <div class="v">
-            <span>پر فروش ترین محصولات</span>
-            <a name="por"></a>
-        </div>
-
-
-
-
-
-
-
-
-
-        <div class="forosh">
-            <div style="text-align: center;">
-                <div style="text-align: right;"><img src="pic/heart-white-outline.svg" alt=""
-                        style="width: 20px; margin: 5px;"></div>
-                <div style="text-align: center;">
-                    <img src="pic/145deceac01a66e6cf160ed04f48e9ece3c33098_1754235521-removebg-preview.png" alt=""
-                        style="height: 100px; width: 100px;">
-                    <span>Soundcore Q20i</span><br>
-                    <span>(24)4.8 <img src="pic/star-gold.svg" alt="" width="13px"></span>
-                    <a href="sabad.html">
-                        <div class="t">افزودن به سبد خرید</div>
-                    </a>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <div style="text-align: right;"><img src="pic/heart-white-outline.svg" alt=""
-                        style="width: 20px; margin: 5px;"></div>
-                <div style="text-align: center;">
-                    <img src="pic/fb9814588ef1d795f0fd820632f4481778c65b8f_1765354532-removebg-preview.png" alt=""
-                        style="height: 100px; width: 100px;">
-                    <span>tesco/powerbank</span><br>
-                    <span>(55)4.9 <img src="pic/star-gold.svg" alt="" width="13px"></span>
-                    <a href="sabad.html">
-                        <div class="t">افزودن به سبد خرید</div>
-                    </a>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <div style="text-align: right;"><img src="pic/heart-white-outline.svg" alt=""
-                        style="width: 20px; margin: 5px;"></div>
-                <div style="text-align: center;">
-                    <img src="pic/d1e5b3f2d7efb25b1065e3b633a9d885ce5bb89e_1757856988-removebg-preview.png" alt=""
-                        style="height: 100px; width: 100px;">
-                    <span>applewatch/seties11</span><br>
-                    <span>(17)4.5 <img src="pic/star-gold.svg" alt="" width="13px"></span>
-                    <a href="sabad.html">
-                        <div class="t">افزودن به سبد خرید</div>
-                    </a>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <div style="text-align: right;"><img src="pic/heart-white-outline.svg" alt=""
-                        style="width: 20px; margin: 5px;"></div>
-                <div style="text-align: center;">
-                    <img src="pic/d530b29693494d25b87bcadcee007922b6393275_1758351222-removebg-preview.png" alt=""
-                        style="height: 100px; width: 100px;">
-                    <span>iphone17promax</span><br>
-                    <span>(11)5.0 <img src="pic/star-gold.svg" alt="" width="13px"></span>
-                    <a href="sabad.html">
-                        <div class="t">افزودن به سبد خرید</div>
-                    </a>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <div style="text-align: right;"><img src="pic/heart-white-outline.svg" alt=""
-                        style="width: 20px; margin: 5px;"></div>
-                <div style="text-align: center;">
-                    <img src="pic/images__9_-removebg-preview (1).png" alt=""
-                        style="height: 100px; width: 100px;">
-                    <span>Galaxy/s26Ultra</span><br>
-                    <span>(24)4.8 <img src="pic/star-gold.svg" alt="" width="13px"></span>
-                    <a href="sabad.html">
-                        <div class="t">افزودن به سبد خرید</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <div class="baner2">
-            <div style="background-image: url(pic/1c458461-5ec6-46a4-9fd6-58afa4b9ed52.jpeg);">
-            </div>
-            <div style="background-image: url(pic/ce44fa4e-e8d4-4e7d-805c-5ac9e6f5755b.jpeg);">
-
-            </div>
-
-        </div>
-        <div class="v">
-            <a name="brand"></a>
-            <span>برند های محبوب</span>
-        </div>
-        <div class="brand">
-
-
-            <div> <a href="mahsolat.html"><img src="pic/images__6_-removebg-preview (1).png" alt="" width="140px"
-                        height="40px" style="margin: 15px auto 10px;"></a></div>
-
-            <div><a href="mahsolat.html"><img src="pic/images__1_-removebg-preview.png" alt="" width="150px" height="70px"
-                    style="margin: 5px 0px 0px 5px;"></a></div>
-            <div><a href="mahsolat.html"><img src="pic/download__2_-removebg-preview.png" alt="" width="140px" height="60px"
-                    style="margin: 5px 0px 0px 5px;"></a></div>
-            <div><a href="mahsolat.html"><img src="pic/images__7_-removebg-preview (1).png" alt="" width="160px" height="65px"
-                    style="margin: 5px 0px 0px 5px;"></a></div>
-            <div><a href="mahsolat.html"><img src="pic/images__8_-removebg-preview (1).png" alt="" width="140px" height="70px"
-                    style="margin: 5px 5px 0px 10px;"></a></div>
-            <div><a href="mahsolat.html"><img src="pic/images__9_-removebg-preview.png" alt="" width="80px" height="80px"
-                    style="margin: 0px 35px 0px 0px;"></a></div>
-
-
-
-        </div>
-        <div class="v">
-            <span>چرا از موبایل تک خرید کنیم؟</span>
-        </div>
-
-        <div class="chera">
-
-            <div>
-                <div>
-                    <img src="pic/fast-shipping.svg" alt="" style="height: 30px; width: 50px; margin-top: 10px;">
-                </div>
-                <span>ارسال به سراسر کشور</span>
-
-                <pre>ارسال به همه نقاط <br>ایران</pre>
-
-            </div>
-
-            <div>
-                <div>
-                    <img src="pic/customer-satisfaction.svg" alt=""
-                        style="height: 30px; width: 50px; margin-top: 10px;">
-                </div>
-                <span>رضایت مشتری</span>
-
-                <pre>بیش از 10 هزار رضایت <br>مشتری</pre>
-
-            </div>
-
-            <div>
-                <div>
-                    <img src="pic/guaranteed-quality.svg" alt="" style="height: 30px; width: 50px; margin-top: 10px;">
-                </div>
-                <span>کیفیت تضمینی</span>
-
-                <pre>محصولات اورجینال<br>با گارانتی تک</pre>
-
-            </div>
-
-            <div>
-                <div>
-                    <img src="pic/customer-satisfaction.svg" alt=""
-                        style="height: 30px; width: 50px; margin-top: 10px;">
-                </div>
-                <span>قیمت های ر قابتی</span>
-
-                <pre>بهترین قیمت ها <br>در بازار</pre>
-
-            </div>
-
-            <div>
-                <div>
-                    <img src="pic/easy-shopping.svg" alt="" style="height: 30px; width: 50px; margin-top: 10px;">
-                </div>
-                <span>تجربه خرید اسان</span>
-
-                <pre>سفارش سریع و راحت <br>در چند کلیک</pre>
-
-            </div>
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-        <div class="footer">
-            <div>
-                <a href="darbare.html">
-                    <p>ارتباط با ما</p>
-                    <span> خرم آباد ,خیابان 17 شهریور, مجتمع فنی</span><br>
-                    <span>06633335506</span><br>
-                    <span>09014151520</span><br>
-                    <span>hessanforozandeh@gmail.com</span>
-                </a>
-            </div>
-
-
-
-            <div>
-                <a href="">
-                    <p>خدمات مشتریان</p>
-                    <span> پشتیبانی 24ساعته</span><br>
-                    <span>بازگشت کالا</span><br>
-                    <span>وضعیت سفارش</span><br>
-                    <span>روش های پرداخت</span><br>
-                    <span>راهنمای خرید</span>
-                </a>
-            </div>
-
-
-
-            <div>
-                <a href="">
-                    <p>لینک های مفید</p>
-                    <span> درباره ما</span><br>
-                    <span>تماس با ما</span><br>
-                    <span>سوال های متداول</span><br>
-                    <span>شرایط و قوانین </span><br>
-                    <span>حریم خصوصی</span>
-                </a>
-            </div>
-
-
-
-            <div>
-                <p>خبر نامه </p>
-                <span>برای دریافت جدیدترین تخفیف ها و محصولات ایمیل خود را وارد کنید</span><br>
-                <form action="#">
-                    <input type="email" placeholder="ایمیل">
-                    <input type="text" placeholder="تایید">
-                </form>
-
-            </div>
-
-
-
-
-
-        </div>
-
-
-        <hr color="black">
-        <div style="margin: auto;text-align: center;">
-
-            <span>حسان فروزنده©</span>
-        </div>
     </div>
 
-    </div>
+  </nav>
+
+
+
 
 
 </body>
