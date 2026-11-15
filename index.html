@@ -1,110 +1,295 @@
-<!doctype html>
-<html dir="ltr">
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="src/output.css" rel="stylesheet">
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
 </head>
+
+
+<style>
+    .banner {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* مانیتورهای خیلی بزرگ */
+    @media (min-width: 1600px) {
+        .banner img {
+            height: 600px;
+        }
+    }
+
+    /* مانیتورهای بزرگ */
+    @media (min-width: 1200px) and (max-width: 1599px) {
+        .banner img {
+            height: 500px;
+        }
+    }
+
+    /* لپ تاپ */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .banner img {
+            height: 420px;
+        }
+    }
+
+    /* تبلت افقی و عمودی */
+    @media (min-width: 769px) and (max-width: 991px) {
+        .banner img {
+            height: 350px;
+        }
+    }
+
+    /* موبایل بزرگ */
+    @media (min-width: 481px) and (max-width: 768px) {
+        .banner img {
+            height: 280px;
+        }
+    }
+
+    /* موبایل کوچک */
+    @media (max-width: 480px) {
+        .banner img {
+            height: 200px;
+        }
+    }
+</style>
+
+
+
+
+
 
 <body>
 
-  <nav class="w-full p-4">
 
-    <div class="flex items-center justify-between bg-orange-50 rounded-lg">
+    <nav class="navbar navbar-expand-lg border-bottom py-1 sticky-top ">
 
-      <!-- دکمه‌ها سمت چپ -->
+        <div class="container">
 
-      <div class="flex items-center gap-3 pl-5">
+            <!-- لوگو و نام -->
 
-        <button class="bg-[#FFFCF7] rounded-lg hover:text-red-50 px-3 py-3 text-sm">Login</button>
+            <a class="navbar-brand d-flex align-items-center gap-4 fw-bold " href="#">
 
-        <button class="bg-[#FFFCF7] rounded-lg hover:text-red-500 px-3 py-3 text-sm">Sign Up</button>
+                <img src="pic/file_00000000608881f9a6ab4afca15642b7 (1).png" width="70" height="70" alt="NORISA"
+                    class="rounded-circle">
 
-      </div>
-      <h1 class="text-3xl" >NORISA</h1>
+                NORISA
 
-      <!-- دسته‌بندی وسط -->
+            </a>
 
-      <ul class="flex items-center gap-6">
+            <!-- منوی همبرگری -->
 
-        <li class="hidden md:block">درباره ما</li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
 
-        <li class="hidden md:block">ارتباط با ما</li>
-        <div class="relativ group">
-        <a href="#" class="hidden md:block">دسته بندی</a>
+                <span class="navbar-toggler-icon"></span>
 
-          <div class="absolute hidden group-hover:block bg-white text-black w-40 shadow-lg rounded-lg ">
+            </button>
 
-            <a href="#" class="block p-3 hover:bg-gray-100">Mobile</a>
-            <a href="#" class="block p-3 hover:bg-gray-100">Laptop</a>
-            <a href="#" class="block p-3 hover:bg-gray-100">Accessories</a>
+            <!-- لینک ها -->
 
-          </div>
+            <div class="collapse navbar-collapse" id="navbar">
+
+                <ul class="navbar-nav mx-auto gap-lg-4">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="#">خانه</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">محصولات</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">دسته‌بندی‌ها</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">درباره ما</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">تماس با ما</a>
+
+                    </li>
+
+                </ul>
+
+                <!-- ورود و سبد خرید -->
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <a href="#" class="text-dark text-decoration-none">
+
+                        ورود
+
+                    </a>
+
+                    <a href="#" class="btn cart-btn">
+
+                        سبد خرید
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <a href="#" class="hidden md:block">خانه</a>
-
-      </ul>
-
-      <img src="pic/file_00000000608881f9a6ab4afca15642b7 (1).png" class="w-20 h-20 object-contain rounded-full p-1">
+    </nav>
 
 
 
- <!— دکمه همبرگری —>
-<button id="openBtn" aria-label="باز کردن منو"class="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg hover:bg-slate-100 flex md:hidden">
-  <span class="h-0.5 w-6 bg-slate-800"></span>
-  <span class="h-0.5 w-6 bg-slate-800"></span>
-  <span class="h-0.5 w-6 bg-slate-800"></span>
-</button>
 
-<!— پس‌زمینه تیره —>
-<div id="overlay"
-  class="pointer-events-none fixed inset-0 z-40 bg-black-50 opacity-0 transition-opacity duration-300"></div>
 
-<!— منوی کشویی —>
-<aside id="drawer"
-  class="fixed right-0 top-0 z-50 h-full w-72 max-w-[80%] translate-x-full bg-white shadow-xl transition-transform duration-300 ease-out">
-  <button id="closeBtn" aria-label="بستن منو"class="m-3 h-9 w-9 rounded-lg text-xl hover:bg-slate-100">✕</button>
-  <br>
-  <input type="search" value="" placeholder="search" class="px-2">
-  <br>
-   <a href="#" class="hover:bg-slate-100 px-2 py-1 rounded-lg text-xl">خانه</a>
-  <br>
-   <a href="#" class="hover:bg-slate-100 px-2 py-1 rounded-lg text-xl ">دسته بندی</a>
-  <br>
-   <a href="#" class="hover:bg-slate-100 px-2 py-1 rounded-lg text-xl">ارتباط با ما</a>
-  <br>
-   <a href="#" class="hover:bg-slate-100 px-2 py-1 rounded-lg text-xl">درباره ما</a>
-  
-</aside>
 
-<script>
-  const drawer = document.getElementById("drawer");
-  const overlay = document.getElementById("overlay");
 
-  function openMenu() {
-    drawer.classList.remove("translate-x-full");
-    overlay.classList.remove("pointer-events-none", "opacity-0");
-  }
-  function closeMenu() {
-    drawer.classList.add("translate-x-full");
-    overlay.classList.add("pointer-events-none", "opacity-0");
-  }
 
-  document.getElementById("openBtn").onclick = openMenu;
-  document.getElementById("closeBtn").onclick = closeMenu;
-  overlay.onclick = closeMenu;
-</script>
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active">
+            </button>
+
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1">
+            </button>
+
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2">
+            </button>
+
+        </div>
+
+
+        <!-- Images -->
+        <div class="carousel-inner">
+
+            <!-- Image 1 -->
+            <div class="carousel-item active" data-bs-interval="3000">
+
+                <img src="pic/FA5F2EED-467A-4D16-B014-27853153C92A.png.jpeg" class="d-block w-100" alt="تصویر اول">
+
+                <div class="carousel-caption">
+                    <h3>عنوان اول</h3>
+                    <p>توضیحات تصویر اول</p>
+                </div>
+
+            </div>
+
+
+            <!-- Image 2 -->
+            <div class="carousel-item" data-bs-interval="3000">
+
+                <img src="pic/FA5F2EED-467A-4D16-B014-27853153C92A.png.jpeg" class="d-block w-100" alt="تصویر دوم">
+
+                <div class="carousel-caption">
+                    <h3>عنوان دوم</h3>
+                    <p>توضیحات تصویر دوم</p>
+                </div>
+
+            </div>
+
+
+            <!-- Image 3 -->
+            <div class="carousel-item" data-bs-interval="3000">
+
+                <img src="pic/FA5F2EED-467A-4D16-B014-27853153C92A.png.jpeg" class="d-block w-100" alt="تصویر سوم">
+
+                <div class="carousel-caption">
+                    <h3>عنوان سوم</h3>
+                    <p>توضیحات تصویر سوم</p>
+                </div>
+
+            </div>
+
+        </div>
 
 
 
 
     </div>
 
-  </nav>
 
+
+    <div class="container my-4">
+
+        <div class="row g-3">
+
+            <div class="col-6 col-md-3">
+
+                <div class="category">
+
+                    <img src="pic/982D5994-EA3F-43D7-A5E0-7FBCC49C5B88.png.jpeg">
+
+                    <p>انگشتر</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-6 col-md-3">
+
+                <div class="category">
+
+                    <img src="pic/982D5994-EA3F-43D7-A5E0-7FBCC49C5B88.png.jpeg">
+
+                    <p>گردنبند</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-6 col-md-3">
+
+                <div class="category">
+
+                    <img src="pic/982D5994-EA3F-43D7-A5E0-7FBCC49C5B88.png.jpeg">
+
+                    <p>دستبند</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-6 col-md-3">
+
+                <div class="category">
+
+                    <img src="pic/982D5994-EA3F-43D7-A5E0-7FBCC49C5B88.png.jpeg">
+
+                    <p>گوشواره</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
 
