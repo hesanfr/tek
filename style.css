@@ -1,3 +1,18 @@
+ @font-face {
+     font-family: 'bzar';
+     src: url(fonts/BZar.eot#?)format('eot'), url(fonts/BZar.woff), url(fonts/BZar.ttf)format('truetype');
+     font-family: 'ab';
+     src: url(fonts/Vazirmatn-VariableFont_wght.ttf)format('truetype');
+ }
+
+ * {
+     font-family: ab;
+ }
+
+
+
+
+
 body {
     background-color: #F8F3EA;
 }
@@ -31,41 +46,135 @@ body {
 }
 
 
-
-
-.categories {
-    display: grid;
-    grid-template-columns: 4;
-    gap: 15px;
-    padding: 15px;
-}
-
 .category {
-    position: relative;
-    height: 250px;
-    border-radius: 20px;
+    text-align: center;
+    width: 100%;
 }
 
 .category img {
-    width: 200px;
-    height: 250px;
+    width: 100%;
+    max-width: 180px;
     background-size: cover;
-        border-radius: 20px;
-
-    
-
+    border-radius: 20px;
+    margin: 0 auto;
 }
 
 .category p {
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-    color: white;
-    background: #C49A45;
-    padding: 5px 15px;
-    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
 }
 
+/* موبایل */
+@media (max-width: 576px) {
+    .category img {
+        max-width: 160px;
+    }
+}
+
+/* تبلت */
+@media (min-width: 577px) {
+    .category img {
+        max-width: 160px;
+    }
+}
+
+/* لپ تاپ و مانیتور */
+@media (min-width: 992px) {
+    .category img {
+        max-width: 180px;
+    }
+}
+
+
+.product-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 10px;
+    height: 100%;
+    text-align: right;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+}
+
+.product-card img {
+    width: 100%;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.product-info {
+    padding: 10px 5px;
+}
+
+.product-info h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.product-details {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+}
+
+.product-details p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: 5px 0;
+    color: #777;
+}
+
+.product-details span {
+    color: #222;
+    font-weight: 600;
+}
+
+.price {
+    color: #a88746;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.service-box {
+    text-align: center;
+    padding: 20px 10px;
+    background: #faf8f3;
+    border-radius: 12px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    background: #f3ead8;
+    transform: translateY(-4px);
+}
+
+.service-box i {
+    font-size: 30px;
+    color: #b08d57;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.service-box h6 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.service-box p {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 0;
+}
 
 
  
